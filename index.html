@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    
+    <meta charset=utf-8>
+    <title>deluxo</title>
+    <style>
+      * { font-family: sans-serif; }
+      html, body { height: 100%; width: 100%; background: #fff; }
+      body { font-size: 1.3em; margin: 0; }
+      #container { height: 100%; width: 100%; max-width: 600px; text-align: center; margin: 0 auto; display: table; }
+      #container #align { display: table-cell; vertical-align: middle; width: 100%; }
+      p { margin: 40px auto 20px auto; font-weight: 300; }
+      a { color: #000; font-weight: bold; text-decoration: none; }
+      a:hover { background: #000; color: #fff; }
+      .sm { font-size: .8em; padding: 0 0 30px 0; margin: 10px 0 0 0; }
+      .ps { margin: 0 0 -30px 0; }
+      .ft { font-size: .6em; }
+      #token {height: 50px; position: absolute; pointer-events: auto; }
+      #tokenbubble {width: 900px; height: 600px; position: absolute; margin: -175px 0 0 -150px; pointer-events: none; }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHVZGVQ395"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VHVZGVQ395');
+    </script>
+
+  </head>
+  
+  <body>
+    <div id="container">
+      <div id="align">
+        <div id="tokenbubble">
+          <!-- https://thelukewest.wordpress.com/2016/11/07/pixel-art-animated-coin/ -->
+          <a href="https://deluxo.org" target="_blank"><img id="token" src="token.gif" /></a>
+        </div>
+        <img src="deluxo.png" width="300" height="75" />
+        <p class="sm"><i>internet company</i></p>
+        <p class="ps">email <u><a href="mailto:hello@deluxo.com">hello@deluxo.com</a></u> for more information</p>
+        <p>follow <u><a href="https://twitter.com/deluxo" target="_blank">@deluxo</a></u> for updates</p>
+        <p class="ft">© Deluxo LLC, 2018 - <script>document.write(new Date().getFullYear())</script></p>
+      </div>
+    </div>
+    <script>
+
+      function getRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      const speed1 = -1.5;
+      const speed2 = 1.5;
+
+      const section = document.querySelector("#tokenbubble");
+      const logo = document.querySelector("#token");
+      const FPS = 60;
+      let xPosition = getRandomInt(10, 800);
+      let yPosition = getRandomInt(10, 500);
+      let xSpeed = Math.random() < 0.5 ? speed1 : speed2;
+      let ySpeed = Math.random() < 0.5 ? speed1 : speed2;
+
+      function update() {
+        logo.style.left = xPosition + "px";
+        logo.style.top = yPosition + "px";
+      }
+
+      setInterval(() => {
+        if (xPosition + logo.clientWidth >= 900 || xPosition <= 0) {
+          xSpeed = -xSpeed;
+        }
+        if (yPosition + logo.clientHeight >= 600 || yPosition <= 0) {
+          ySpeed = -ySpeed;
+        }
+        xPosition += xSpeed;
+        yPosition += ySpeed;
+        update();
+      }, 1000 / FPS);
+
+    </script>
+  </body>
+</html>
