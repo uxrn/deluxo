@@ -1,95 +1,176 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deluxo | Design & Brand Consulting</title>
     
-    <meta charset="utf-8">
-    <title>deluxo</title>
-    <style>
-      * { font-family: sans-serif; }
-      html, body { height: 100%; width: 100%; background: #fff; }
-      body { font-size: 1.3em; margin: 0; }
-      #container { height: 100%; width: 100%; max-width: 600px; text-align: center; margin: 0 auto; display: table; }
-      #container #align { display: table-cell; vertical-align: middle; width: 100%; }
-      .para { margin: 40px auto 20px auto; font-weight: 300; }
-      .a1 { color: #000; font-weight: bold; text-decoration: none; }
-      .a1:hover { background: #000; color: #fff; }
-      .sm { font-size: .8em; padding: 0 0 30px 0; margin: 10px 0 0 0; }
-      .ps { margin: 0 0 -30px 0; }
-      .ft { font-size: .6em; }
-      #token { height: 50px; position: absolute; pointer-events: auto; }
-      #tokenbubble { width: 900px; height: 600px; position: absolute; margin: -175px 0 0 -150px; pointer-events: none; }
-      #fsbanner { position: absolute; height: auto; width: 100%; background-color: #000; color: #fff; font-size: 14px; font-weight: normal; padding: 0; text-align: center;}
-      .a2 { color: #fff; font-weight: bold; text-decoration: none;}
-      .a2:hover { background-color: #fff; color: #000; }
-    </style>
-
-    <!-- Google tag (gtag.js) -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHVZGVQ395"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-VHVZGVQ395');
     </script>
-
   </head>
-  
-  <body>
+<body class="home-page">
+    <!-- Header Component -->
+    <div id="header-container"></div>
 
-    <div id="fsbanner">
-      <p style="margin: 5px;">The domain deluxo.com is for sale. Contact <a class="a2" href="mailto:offer@namerie.com">offer@namerie.com</a> or <a class="a2" href="https://namerie.com/forsale.html?url=deluxo.com" target="_blank">make an offer</a>.</p>
-    </div>
-
-    <div id="container">
-      <div id="align">
-        <div id="tokenbubble">
-          <!-- https://thelukewest.wordpress.com/2016/11/07/pixel-art-animated-coin/ -->
-          <a href="https://deluxo.org" target="_blank"><img id="token" src="token.gif" /></a>
+    <!-- Hero Section -->
+    <section id="hero" class="vh-100 d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-1 fw-bold mb-4 text-white">We <span id="shape-text"></span><span class="cursor">|</span> Brands</h1>
+            <p class="lead mb-5 text-white">Strategic design and brand consulting for ideas that just need a little oomph</p>
+            <a href="../contact" class="btn btn-outline-light btn-lg">Let's Talk</a>
         </div>
-        <img src="deluxo.png" width="300" height="75" />
-        <p class="para sm"><i>internet company</i></p>
-        <p class="para ps">email <u><a class="a1" href="mailto:hello@deluxo.com">hello@deluxo.com</a></u> for more information</p>
-        <p class="para">follow <u><a class="a1" href="https://twitter.com/deluxo" target="_blank">@deluxo</a></u> for updates</p>
-        <p class="para ft">© Deluxo LLC, 2018 - <script>document.write(new Date().getFullYear())</script></p>
-      </div>
-    </div>
-    <script>
+    </section>
 
-      function getRandomInt(min, max) {
-          min = Math.ceil(min);
-          max = Math.floor(max);
-          return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
+    <!-- Work Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold my-4">Featured Work</h2>
+                    <p class="lead mb-5">
+                        Take a look at some of our recent work. Each project represents our commitment to 
+                        excellence in design and strategic thinking, helping brands reach their full potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      const speed1 = -1.5;
-      const speed2 = 1.5;
+    <!-- Work Section -->
+    <section id="work" class="work-section">
+        <!-- Work Panel Section 1 -->
+        <section class="work-panel-section">
+            <!-- Project 1 -->
+            <div class="work-panel" style="background-color: #370b61;">
+                <div class="work-panel-content">
+                    <img src="../images/grype-green.png" alt="Grype" class="work-logo" id="grype-logo">
+                    <div class="work-overlay-dark">
+                        <h3>Grype</h3>
+                        <p>Subtle imagery with a clean font-face, creating a brand with personality and purpose.</p>
+                        <a href="https://grype.co" target="_blank" class="btn btn-outline-dark">View Site</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="work-panel" style="background-color: #D41B2C;">
+                <div class="work-panel-content">
+                    <img src="../images/meatshack-white.png" alt="Mike's Meatshack" class="work-logo" id="meatshack-logo">
+                    <div class="work-overlay-dark">
+                        <h3>Mike's Meatshack</h3>
+                        <p>Warm and inviting digital presentation, providing a new vibe to a classic name.</p>
+                        <a href="https://mikesmeatshack.com" target="_blank" class="btn btn-outline-dark">View Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Work Panel Section 2 -->
+        <section class="work-panel-section">
+            <!-- Project 3 -->
+            <div class="work-panel" style="background-color: #e0351b;">
+                <div class="work-panel-content">
+                    <img src="../images/akimbo-white.png" alt="Akimbo" class="work-logo" id="akimbo-logo">
+                    <div class="work-overlay-dark">
+                        <h3>Akimbo</h3>
+                        <p>Sharp and easily recognizable brand imagery, with a dash of explosive energy.</p>
+                        <a href="https://akimbo.gg" target="_blank" class="btn btn-outline-dark">View Site</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="work-panel" style="background-color: #e9ecef;">
+                <div class="work-panel-content">
+                    <img src="../images/bellryan-black.png" alt="Bellryan" class="work-logo" id="bellryan-logo">
+                    <div class="work-overlay-light">
+                        <h3>Bellryan</h3>
+                        <p>Smooth strokes help create a welcoming brand that is both elegant and friendly.</p>
+                        <a href="https://bellryan.com" target="_blank" class="btn btn-outline-dark">View Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
 
-      const section = document.querySelector("#tokenbubble");
-      const logo = document.querySelector("#token");
-      const FPS = 60;
-      let xPosition = getRandomInt(10, 800);
-      let yPosition = getRandomInt(10, 500);
-      let xSpeed = Math.random() < 0.5 ? speed1 : speed2;
-      let ySpeed = Math.random() < 0.5 ? speed1 : speed2;
+    <!-- Work Description Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold my-4">Our Philosophy</h2>
+                    <p class="lead mb-5">
+                        We believe in creating meaningful designs using both core and expressive concepts. 
+                        Our process involves a combination of two smaller ideals: SEE and AIR.
+                    </p>
+                    <p class="lead mb-5">
+                        While SEE focuses on the visual and experiential aspects of a design, 
+                        AIR focuses on the underlying principles that make a design effective.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      function update() {
-        logo.style.left = xPosition + "px";
-        logo.style.top = yPosition + "px";
-      }
+    <!-- Core Concepts Component -->
+    <div id="core-concepts-container"></div>
 
-      setInterval(() => {
-        if (xPosition + logo.clientWidth >= 900 || xPosition <= 0) {
-          xSpeed = -xSpeed;
-        }
-        if (yPosition + logo.clientHeight >= 600 || yPosition <= 0) {
-          ySpeed = -ySpeed;
-        }
-        xPosition += xSpeed;
-        yPosition += ySpeed;
-        update();
-      }, 1000 / FPS);
+    <!-- Clients Component -->
+    <div id="clients-container"></div>
 
-    </script>
+    <!-- Call to Action Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold my-4">Ready to create?</h2>
+                    <p class="lead mb-5">
+                        Let's create something extraordinary together. Our team is ready to help you 
+                        shape your brand's future with strategic design and innovative thinking.
+                    </p>
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="../contact" class="btn btn-outline-light btn-lg">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/three.min.js"></script>
+    <script src="../js/vanta.birds.min.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/hero-text.js"></script>
+    <script src="../js/core-concepts.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/vanta-init.js"></script>
   </body>
 </html>
