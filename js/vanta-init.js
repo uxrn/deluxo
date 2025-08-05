@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            speedLimit: 4.00,
+            speedLimit: 2.50,
             wingSpan: 10.00,
             separation: 100.00,
             alignment: 100.00,
@@ -24,4 +24,5 @@ document.addEventListener('DOMContentLoaded', function() {
             backgroundColor: 0x212529
         });
     }
+
 }); 
